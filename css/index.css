@@ -1,0 +1,1797 @@
+/* ===== ESTILOS GENERALES ===== */
+body {
+    background-color: #CDCDCD;
+    /* Fondo exterior gris */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: #f8f5f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas: "nav main aside";
+}
+
+/* Hamburger: hidden on desktop */
+.hamburger-toggle {
+    display: none;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 30px;
+    min-height: 110px;
+    background-color: #8b0000;
+    /* Tu rojo */
+    color: white;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header h1 {
+    color: white;
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+header a,
+header a:visited {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #ffd700;
+    /* Dorado para hover */
+    text-decoration: underline;
+}
+
+div.saludo {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* ===== NAVEGACIÃ“N IZQUIERDA ===== */
+nav {
+    padding: 15px;
+    width: 200px;
+    background: #f0e9e2;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-right: 1px solid #d4c9c0;
+    grid-area: nav;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 5px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav a,
+nav a:visited {
+    color: #8b0000;
+    /* Tu rojo */
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+nav a:hover {
+    color: #8b0000;
+    background-color: #f8f5f2;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+/* TÃ­tulos dentro del nav */
+nav h3,
+nav h4 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #8b0000;
+}
+
+nav h4 {
+    font-size: 0.95em;
+    margin-top: 20px;
+    border-bottom: 1px solid #d4c9c0;
+}
+
+/* ===== NAVEGACIÃ“N Derecha ===== */
+navder,
+aside {
+    padding: 15px;
+    width: 200px;
+    background: #f0e9e2;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-left: 1px solid #d4c9c0;
+    grid-area: aside;
+}
+
+navder ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 5px;
+    margin: 0;
+}
+
+navder ul li {
+    margin: 10px 0;
+}
+
+navder a,
+navder a:visited {
+    color: #8b0000;
+    /* Tu rojo */
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+navder a:hover {
+    color: #8b0000;
+    background-color: #f8f5f2;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+/* TÃ­tulos dentro del nav */
+navder h3,
+navder h4 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #8b0000;
+}
+
+navder h4 {
+    font-size: 0.95em;
+    margin-top: 20px;
+    border-bottom: 1px solid #d4c9c0;
+}
+
+
+/* Secciones del sidebar */
+.sidebar-usuario,
+.sidebar-acceso {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #d4c9c0;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    padding: 20px;
+    flex: 1;
+    background: #f8f5f2;
+    overflow-y: auto;
+    box-sizing: border-box;
+    color: #333;
+    /* IMPORTANTE: color de texto */
+    grid-area: main;
+}
+
+/* Para asegurar que todo el texto se ve */
+main h1,
+main h2,
+main h3,
+main p,
+main li {
+    color: #333;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 20px;
+    background-color: #8b0000;
+    /* Tu rojo */
+    color: white;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===== TÃTULOS ===== */
+h1 {
+    margin-top: 0;
+    color: #8b0000;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #555;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #8b0000;
+}
+
+/* ===== PÃRRAFOS ===== */
+p {
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+/* ===== LISTAS ===== */
+ul,
+ol {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== IMÃGENES ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== FORMULARIOS ===== */
+fieldset {
+    border: 1px solid #d4c9c0;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+}
+
+legend {
+    color: white;
+    background: #8b0000;
+    border: 1px solid black;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d4c9c0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #8b0000;
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.3);
+}
+
+/* Campos de radio y checkbox */
+.opciones-radio {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.opcion-radio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opcion-radio input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.opcion-radio label {
+    display: inline;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Checkbox especial */
+.campo-checkbox {
+    background-color: #f0e9e2;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.campo-checkbox input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.campo-checkbox label {
+    display: inline;
+    font-weight: normal;
+    margin: 0;
+    color: #555;
+}
+
+/* Botones */
+button,
+a.boton,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: Arial;
+    font-weight: 400;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"],
+button[type="submit"],
+.btn-primary {
+    background-color: #8b0000;
+    color: white;
+    border-color: #5c0000;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+.btn-primary:hover {
+    background-color: #a00000;
+}
+
+input[type="reset"],
+.btn-secondary {
+    background-color: #f0e9e2;
+    color: #333;
+}
+
+input[type="reset"]:hover,
+.btn-secondary:hover {
+    background-color: #e0d9d2;
+}
+
+/* BotÃ³n con estilo de enlace */
+form button.enlace,
+form button.enlace:visited {
+    color: #8b0000;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+}
+
+form button.enlace:hover {
+    color: #a00000;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+/* ===== TABLAS ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #8b0000;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #d4c9c0;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f0e9e2;
+}
+
+/* ===== ERRORES Y MENSAJES ===== */
+.errores {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.errores ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+.error,
+.form-field-error {
+    color: #dc3545;
+    font-size: 0.85em;
+    display: block;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+/* Mensajes flotantes (para paso 8) */
+.mensajes {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.mensaje {
+    border: 2px solid #8b0000;
+    border-radius: 5px;
+    margin: 0.2em 0;
+    background-color: #b0f5f1;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mensaje input[type="checkbox"] {
+    display: none;
+}
+
+.mensaje .cabecera {
+    font-size: 1.5em;
+    line-height: 0.7em;
+    text-align: right;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mensaje .cabecera label {
+    cursor: pointer;
+    color: #666;
+}
+
+.mensaje .contenido {
+    padding: 15px 20px;
+    text-align: left;
+    color: #333;
+}
+
+.mensajes input:checked+.mensaje {
+    display: none;
+}
+
+/* ===== UTILIDADES ===== */
+.inline {
+    display: inline;
+}
+
+a.deshabilitado {
+    color: rgba(16, 16, 16, 0.3);
+    pointer-events: none;
+    cursor: default;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1150px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        float: none;
+        width: 100%;
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #d4c9c0;
+    }
+    
+    main {
+        float: none;
+        width: 100%;
+    }
+    
+    .opciones-radio {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* =========================================
+   NUEV DE TARJETAS PARA EL INICIO
+   
+   ========================================= */
+
+/* Contenedor principal del contenido */
+.main-content {
+    text-align: center;
+    /* Centra el tÃ­tulo y subtÃ­tulo */
+    padding: 20px;
+}
+
+.main-content h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+/* Contenedor de la cuadrÃ­cula de tarjetas */
+.panel-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que bajen de lÃ­nea si no caben */
+    gap: 25px;
+    /* Espacio entre tarjetas */
+    justify-content: center;
+    /* Centra las tarjetas en la pÃ¡gina */
+    padding: 20px 0;
+}
+
+/* Estilo base de cada tarjeta (que es un enlace) */
+.tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #d4c9c0;
+    border-radius: 15px;
+    width: 250px;
+    /* Ancho de cada tarjeta */
+    padding: 30px 20px;
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    /* Elementos en vertical */
+    align-items: center;
+    /* Centra elementos horizontalmente */
+    transition: all 0.3s ease;
+    /* AnimaciÃ³n suave para el hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* Sombra muy suave */
+}
+
+/* EFECTO HOVER: Al pasar el ratÃ³n */
+.tarjeta:hover {
+    transform: translateY(-8px);
+    /* Levanta la tarjeta */
+    box-shadow: 0 12px 20px rgba(139, 0, 0, 0.15);
+    /* Sombra mÃ¡s pronunciada y rojiza */
+    border-color: #8b0000;
+    /* Borde rojo Bistro */
+}
+
+/* Contenedor del icono */
+.icono-contenedor {
+    background-color: #fdfaf7;
+    /* Fondo muy suave para el icono */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* CÃ­rculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+/* Estilo del icono (si es emoji/texto) */
+.icono {
+    font-size: 40px;
+}
+
+/* Estilo del icono (si es imagen <img>) */
+.icono-img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/* TÃ­tulo de la tarjeta */
+.tarjeta h3 {
+    margin: 0 0 10px 0;
+    color: #8b0000;
+    /* Rojo Bistro */
+    font-size: 1.4em;
+    border: none;
+    /* Quita cualquier borde heredado */
+}
+
+/* DescripciÃ³n de la tarjeta */
+.tarjeta p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+/* ===== FASE 2: CSS FLEXBOX - COMPONENTES INTERNOS ===== */
+.lista-pedidos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.pedido-card {
+    flex: 0 1 calc(33.333% - 10px);
+    min-width: 250px;
+}
+
+.pedidos-dashboard-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.usuario-info-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.panel-tarjetas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.tarjeta {
+    flex: 0 1 calc(33.333% - 17px);
+    min-width: 200px;
+}
+
+.formFieldWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.formFieldWrapper label,
+.formFieldWrapper input,
+.formFieldWrapper textarea,
+.formFieldWrapper select {
+    width: 100%;
+}
+
+.formButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* ===== AVATARES Y PREVISUALIZACIÃ“N ===== */
+.campo-avatar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.avatar-preview {
+    margin: 15px 0;
+}
+
+.avatar-vista-previa {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #8b0000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.opciones-avatar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f0e9e2;
+    border-radius: 8px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+
+.mini-previews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f5f2;
+    border-radius: 8px;
+    justify-content: center;
+}
+
+.avatar-miniatura {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+    object-fit: cover;
+}
+
+.avatar-miniatura:hover {
+    transform: scale(1.1);
+    border-color: #8b0000;
+}
+
+.miniatura-seleccionada {
+    border-color: #8b0000;
+    box-shadow: 0 0 0 2px #ffd700;
+}
+
+.avatar-upload {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f0e9e2;
+    border-radius: 8px;
+}
+
+#upload-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#upload-preview img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 8px;
+    border: 2px solid #8b0000;
+}
+
+/* ===== ESTILOS PARA ADMINISTRACIÃ“N ===== */
+.acciones-globales {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-usuarios th {
+    background-color: #8b0000;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-usuarios td {
+    padding: 10px;
+    border-bottom: 1px solid #d4c9c0;
+}
+
+.tabla-usuarios tr:hover {
+    background-color: #f0e9e2;
+}
+
+.acciones {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.btn-ver,
+.btn-editar,
+.btn-rol,
+.btn-borrar {
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.9em;
+    color: white;
+}
+
+.btn-ver {
+    background-color: #2196F3;
+}
+
+.btn-editar {
+    background-color: #FF9800;
+}
+
+.btn-rol {
+    background-color: #9C27B0;
+}
+
+.btn-borrar {
+    background-color: #f44336;
+}
+
+.rol-1 {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Cliente */
+.rol-2 {
+    color: #2196F3;
+    font-weight: bold;
+}
+
+/* Camarero */
+.rol-3 {
+    color: #FF9800;
+    font-weight: bold;
+}
+
+/* Cocinero */
+.rol-4 {
+    color: #9C27B0;
+    font-weight: bold;
+}
+
+/* Gerente */
+
+.usuario-detalle {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-avatar {
+    flex: 0 0 200px;
+}
+
+.avatar-grande {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #8b0000;
+    object-fit: cover;
+}
+
+.detalle-info {
+    flex: 1;
+    line-height: 2;
+}
+
+.detalle-acciones {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.confirmar-borrado {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.texto-info {
+    font-weight: bold;
+    color: #8b0000;
+}
+
+/* Mensajes de Ã©xito y error */
+.mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 20px 0;
+}
+
+.mensaje-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 20px 0;
+}
+
+/* Usuarios inactivos */
+.usuario-inactivo {
+    background-color: #f5f5f5;
+    opacity: 0.8;
+}
+
+.usuario-inactivo td {
+    color: #666;
+}
+
+.inactivo {
+    color: #f44336;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.btn-desactivado {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    border-radius: 3px;
+    font-size: 0.85em;
+    font-weight: bold;
+    cursor: not-allowed;
+    border: 1px solid #bdbdbd;
+}
+
+/* Mejora para los botones de acciÃ³n */
+.acciones {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-ver,
+.btn-editar,
+.btn-rol,
+.btn-borrar {
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.85em;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.btn-ver {
+    background-color: #2196F3;
+}
+
+.btn-editar {
+    background-color: #FF9800;
+}
+
+.btn-rol {
+    background-color: #9C27B0;
+}
+
+.btn-borrar {
+    background-color: #f44336;
+}
+
+.btn-ver:hover,
+.btn-editar:hover,
+.btn-rol:hover,
+.btn-borrar:hover {
+    opacity: 0.8;
+}
+
+/* ===== PANELES DE PEDIDOS (Camarero/Cocinero) ===== */
+.pedidos-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pedidos-dashboard-header h1 {
+    margin: 0;
+    text-align: left;
+}
+
+.usuario-info-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f0e9e2;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.lista-pedidos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.pedido-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    min-width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.pedido-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pedido-card-numero {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.pedido-card-info-extra {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.pedido-card-detalles {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.pedido-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pedido-card-total {
+    font-weight: bold;
+}
+
+.btn-pedido {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: filter 0.2s;
+}
+
+.btn-pedido:hover {
+    filter: brightness(0.9);
+}
+
+.btn-cobrar {
+    background-color: #f39c12;
+}
+
+.btn-preparar {
+    background-color: #3498db;
+}
+
+.btn-entregar {
+    background-color: #2ecc71;
+}
+
+/* Clases adicionales para el panel de pedidos */
+.icon-large {
+    font-size: 1.5em;
+}
+
+.texto-pendientes {
+    color: #f39c12;
+}
+
+.texto-cocina {
+    color: #3498db;
+}
+
+.texto-entregar {
+    color: #2ecc71;
+}
+
+.aviso-vacio {
+    text-align: center;
+    color: #888;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+/* Utilidades generales para vistas */
+.bg-white {
+    background-color: white !important;
+}
+
+.p-20 {
+    padding: 20px !important;
+}
+
+.p-15 {
+    padding: 15px !important;
+}
+
+.rounded-8 {
+    border-radius: 8px !important;
+}
+
+.border-light {
+    border: 1px solid #ddd !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.flex-gap-10 {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+.w-full {
+    width: 100% !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.font-bold {
+    font-weight: bold !important;
+}
+
+.font-lg {
+    font-size: 1.2em !important;
+}
+
+.font-xl {
+    font-size: 1.5em !important;
+}
+
+.btn-danger {
+    background-color: #e74c3c !important;
+    color: white !important;
+}
+
+/* Clases específicas para cocina */
+.btn-cocina-tomar {
+    background-color: #e67e22 !important;
+}
+
+.btn-cocina-listo {
+    background-color: #2ecc71 !important;
+}
+
+.texto-espera {
+    color: #e67e22;
+}
+
+.texto-preparando {
+    color: #e74c3c;
+}
+
+/* Estados de pedidos para el cliente */
+.pedido-lista-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+}
+
+.pedido-lista-card:hover {
+    transform: translateX(5px);
+}
+
+.status-badge {
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    color: white;
+    font-weight: bold;
+}
+
+.estado-nuevo {
+    background-color: #3498db;
+    border-left: 4px solid #3498db;
+}
+
+.estado-recibido {
+    background-color: #f39c12;
+    border-left: 4px solid #f39c12;
+}
+
+.estado-preparacion {
+    background-color: #e67e22;
+    border-left: 4px solid #e67e22;
+}
+
+.estado-cocinando {
+    background-color: #e74c3c;
+    border-left: 4px solid #e74c3c;
+}
+
+.estado-listo-cocina {
+    background-color: #2ecc71;
+    border-left: 4px solid #2ecc71;
+}
+
+.estado-terminado {
+    background-color: #27ae60;
+    border-left: 4px solid #27ae60;
+}
+
+.estado-entregado {
+    background-color: #95a5a6;
+    border-left: 4px solid #95a5a6;
+}
+
+.estado-cancelado {
+    background-color: #bdc3c7;
+    border-left: 4px solid #bdc3c7;
+}
+
+/* Utilidades adicionales de diseño */
+.flex-between {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.icon-small {
+    font-size: 0.9em !important;
+}
+
+.color-gray {
+    color: #888 !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.tabla-pedidos {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tabla-pedidos th,
+.tabla-pedidos td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para Productos y Categorías */
+.productos-grid,
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.categorias-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.img-card {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.img-detalle {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-miniatura {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.img-miniatura:hover {
+    border-color: #8b0000;
+}
+
+.badge-categoria {
+    background: #e0e0e0;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    color: #555;
+    display: inline-block;
+}
+
+.precio-destacado {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.precio-caja {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #2ecc71;
+    margin: 20px 0;
+}
+
+.detalle-contenedor {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.detalle-seccion {
+    flex: 1;
+}
+
+.detalle-info {
+    flex: 1.5;
+}
+
+.btn-nuevo-verde {
+    background-color: #2ecc71 !important;
+    color: white !important;
+}
+
+.btn-detalle {
+    display: block;
+    text-align: center;
+    background: #eee;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-detalle:hover {
+    background: #ddd;
+}
+
+/* Utilidades adicionales */
+.color-blue {
+    color: #3498db !important;
+}
+
+.color-red {
+    color: #e74c3c !important;
+}
+
+.font-small {
+    font-size: 0.8em !important;
+}
+
+.pt-10 {
+    padding-top: 10px !important;
+}
+
+.border-top {
+    border-top: 1px solid #eee !important;
+}
+
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+
+.mr-10 {
+    margin-right: 10px !important;
+}
+
+/* Más utilidades */
+.mt-15 {
+    margin-top: 15px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+/* Utilidades finales de limpieza */
+.no-decoration {
+    text-decoration: none !important;
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.py-50 {
+    padding: 50px 0 !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.color-maroon {
+    color: #8b0000 !important;
+}
+
+.text-gray-center {
+    text-align: center;
+    color: #888;
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.85em;
+}
+
+/* Estilos para Carrito, Pago y Ofertas */
+.offers-box {
+    background: #f0f8f5 !important;
+    padding: 15px !important;
+    border-left: 4px solid #28a745 !important;
+    border-radius: 5px !important;
+    margin-bottom: 20px !important;
+}
+
+.offer-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 10px !important;
+    padding: 10px !important;
+    background: white !important;
+    border-radius: 5px !important;
+}
+
+.msg-warning {
+    background: #fff3cd !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border: 1px solid #ffc107 !important;
+    margin: 15px 0 !important;
+}
+
+.color-green {
+    color: #28a745 !important;
+}
+
+.bg-light-green {
+    background: #f0f8f5 !important;
+}
+
+.badge-tipo {
+    background: #f0e9e2 !important;
+    padding: 5px 12px !important;
+    border-radius: 15px !important;
+    font-size: 0.9em !important;
+}
+
+.btn-checkout {
+    background: #2ecc71 !important;
+    color: white !important;
+    padding: 12px 30px !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    font-size: 1.1em !important;
+    font-weight: bold !important;
+    display: inline-block !important;
+}
+
+/* Utilidades finales de imagen */
+.img-miembro {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.w-400 {
+    width: 400px;
+}
+
+.p-30 {
+    padding: 30px !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+/* Estilos para Nuevo Pedido (Carta) */
+.btn-selector {
+    width: 220px;
+    height: 220px;
+    border: 2px solid #8b0000;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s;
+    padding: 20px;
+}
+
+.btn-selector:hover {
+    background: #fdf2f2;
+    transform: translateY(-5px);
+}
+
+.grid-carta {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.nav-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-cat {
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    background: #eee;
+    color: #333;
+    font-size: 0.9em;
+    transition: 0.2s;
+}
+
+.btn-cat-active {
+    background: #8b0000;
+    color: white !important;
+}
+
+.card-producto-mini {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 12px;
+    background: white;
+    transition: 0.2s;
+}
+
+.card-producto-mini:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.img-carta {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.badge-descuento {
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.max-w-500 {
+    max-width: 500px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.w-50 {
+    width: 50px !important;
+}
+
+.border-bottom-bold {
+    border-bottom: 2px solid #8b0000;
+}
+
+.max-w-500 {
+    max-width: 500px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Utilidades adicionales */
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.img-mini-80 {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.mt-5 {
+    margin-top: 5px !important;
+}
+
+.btn-activar {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.85em;
+    transition: opacity 0.3s;
+}
+
+.btn-activar:hover {
+    opacity: 0.8;
+}
+
+.btn-desactivado {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    border-radius: 3px;
+    font-size: 0.85em;
+    font-weight: bold;
+    cursor: not-allowed;
+    border: 1px solid #bdbdbd;
+}
+
+/* Estilos para errores de formulario */
+.error {
+    color: #d9534f;
+    font-size: 0.85em;
+    display: block;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.errores-globales {
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.error-message {
+    color: #a94442;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Pequeña ayuda para los campos */
+.bloque-entrada small {
+    display: block;
+    color: #777;
+    font-size: 0.75em;
+    margin-top: 3px;
+}
+
+/* Campos con error */
+input.error-field {
+    border: 1px solid #d9534f;
+    background-color: #fff0f0;
+}
