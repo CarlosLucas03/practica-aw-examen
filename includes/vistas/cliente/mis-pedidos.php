@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../../config.php';
 
 use es\ucm\fdi\aw\Pedido\PedidoAppService;
+use es\ucm\fdi\aw\Valoracion\ValoracionAppService;
 
 if (!estaLogueado()) {
     header('Location: ' . RUTA_BASE . '/login.php');
@@ -19,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cancelar_pedido'])) {
 $service = new PedidoAppService();
 $clienteId = $_SESSION['idUsuario'];
 $pedidos = $service->getPedidosCliente($clienteId);
+$valoracionService = new ValoracionAppService();
 
 $tituloPagina = 'Mis Pedidos';
 
@@ -64,14 +66,28 @@ HTML;
         
         $accionesHtml = '';
         if (in_array($p->estado, ['nuevo', 'recibido'])) {
-            $accionesHtml = <<<HTML
+            $accionesHtml .= <<<HTML
             <form method="POST" class="inline">
                 <input type="hidden" name="cancelar_pedido" value="{$p->id}">
                 <button type="submit" class="btn-pedido btn-danger btn-sm" onclick="return confirm('¿Cancelar este pedido?')">Cancelar</button>
             </form>
 HTML;
         }
-        
+
+        if ($p->estado === 'entregado') {
+            $valoracion = $valoracionService->getValoracionPedido($p->id);
+            if ($valoracion) {
+                $estrellas = str_repeat('⭐', $valoracion->puntuacion);
+                $accionesHtml .= <<<HTML
+                <span class="status-badge estado-entregado">Valorado: {$estrellas}</span>
+HTML;
+            } else {
+                $accionesHtml .= <<<HTML
+                <a href="valorar-pedido.php?id={$p->id}" class="btn-pedido btn-primary btn-sm no-decoration">Valorar pedido</a>
+HTML;
+            }
+        }
+
         $pedidosHtml .= <<<HTML
         <div class="pedido-lista-card {$claseEstado}">
             <div class="flex-between">

@@ -61,6 +61,7 @@ function getMenuPorRol() {
         $menu['items'][] = ['url' => RUTA_VISTAS . '/gerente/ofertas.php', 'texto' => 'Gestionar ofertas'];
         $menu['items'][] = ['url' => RUTA_VISTAS . '/gerente/listarRecompensas.php', 'texto' => 'Gestionar Recompensas'];
         $menu['items'][] = ['url' => RUTA_VISTAS . '/gerente/pedidos-activos.php', 'texto' => 'Pedidos activos'];
+        $menu['items'][] = ['url' => RUTA_VISTAS . '/gerente/valoraciones.php', 'texto' => 'Valoraciones'];
         //$menu['items'][] = ['url' => RUTA_VISTAS . '/gerente/estadisticas.php', 'texto' => 'Estadísticas'];
         $menu['items'][] = ['url' => RUTA_VISTAS . '/camarero/pedidos-pendientes.php', 'texto' => 'Pedidos pendientes'];
     }
